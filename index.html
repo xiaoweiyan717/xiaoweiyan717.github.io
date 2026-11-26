@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Xiaowei Yan — Media Arts Practice &amp; Research</title>
+<meta name="description" content="Portfolio of Xiaowei Yan: practice-based research in motion capture, animation and virtual production, teaching, and creative practice.">
+<style>
+  :root{
+    --ink:#1a1a1a; --paper:#ffffff; --muted:#6b6b6b;
+    --accent:#8a3324;
+    --line:#e3e0da; --soft:#f7f5f1;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:Georgia,'Times New Roman',serif; color:var(--ink); background:var(--paper); line-height:1.65;}
+  nav{position:fixed; top:0; left:0; right:0; background:rgba(255,255,255,.96); border-bottom:1px solid var(--line); z-index:99;}
+  nav ul{list-style:none; display:flex; flex-wrap:wrap; justify-content:center; gap:.4rem; padding:.6rem 1rem;}
+  nav a{font-family:Arial,sans-serif; font-size:.8rem; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); text-decoration:none; padding:.3rem .7rem;}
+  nav a:hover{color:var(--accent);}
+  section{max-width:880px; margin:0 auto; padding:6rem 1.5rem 3.5rem;}
+  h1{font-size:clamp(2rem,5vw,3.2rem); font-weight:normal; line-height:1.15;}
+  h2{font-size:1.9rem; font-weight:normal; border-bottom:1px solid var(--line); padding-bottom:.5rem; margin-bottom:1.5rem;}
+  h3{font-size:1.15rem; margin:1.8rem 0 .4rem;}
+  p{margin-bottom:1rem;}
+  .kicker{font-family:Arial,sans-serif; font-size:.75rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:1rem;}
+  .tagline{font-size:1.15rem; color:var(--muted); max-width:40em;}
+  .hero-media{margin-top:2.5rem;}
+  .btn{display:inline-block; font-family:Arial,sans-serif; font-size:.85rem; letter-spacing:.05em; color:var(--accent); border:1px solid var(--accent); padding:.55rem 1.3rem; text-decoration:none; margin:.3rem .6rem .3rem 0;}
+  .btn:hover{background:var(--accent); color:#fff;}
+  .grid{display:grid; grid-template-columns:1fr 1fr; gap:1.2rem; margin:1.2rem 0;}
+  @media(max-width:640px){.grid{grid-template-columns:1fr;}}
+  .card{border:1px solid var(--line); padding:1.6rem; margin:2rem 0;}
+  .card h3{margin-top:0;}
+  .meta{font-family:Arial,sans-serif; font-size:.78rem; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:.6rem;}
+  .role{font-size:.95rem; color:var(--muted);}
+  ul.list{margin:0 0 1rem 1.2rem;}
+  ul.list li{margin-bottom:.35rem;}
+  video{width:100%; display:block; background:#000; margin:1rem 0;}
+  footer{border-top:1px solid var(--line); margin-top:4rem; padding:2.5rem 1.5rem 4rem; text-align:center; color:var(--muted); font-family:Arial,sans-serif; font-size:.85rem;}
+  .caption{font-family:Arial,sans-serif; font-size:.78rem; color:var(--muted); line-height:1.5;}
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#practice">Practice</a></li>
+    <li><a href="#teaching">Teaching</a></li>
+    <li><a href="#cv">CV &amp; Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============ 1. HOME ============ -->
+<section id="home">
+  <div class="kicker">Portfolio · 2026</div>
+  <h1>Xiaowei Yan</h1>
+  <p class="tagline">I am an animation and visual-effects practitioner and educator researching what makes a captured performance usable in a creative workflow — and building the pipelines that produce it.</p>
+
+  <p style="margin-top:1.5rem;">Assistant Lecturer in Animation and Digital Media Arts at Yinchuan University of Science and Technology, where I initiated the motion-capture programme and authored its pipeline documentation. M.F.A. in Artistic Design, Renmin University of China. Former visual-effects artist specialising in light and energy effects.</p>
+
+  <div class="hero-media">
+    <video src="assets/videos/mocap-showcase.mp4" autoplay muted loop playsinline controls preload="metadata"></video>
+    <p class="caption">Motion-capture pipeline showcase — capture, repair, retargeting and in-engine integration. Mandarin voice-over; the work is presented here as moving-image practice.</p>
+  </div>
+</section>
+
+<!-- ============ 2. RESEARCH ============ -->
+<section id="research">
+  <div class="kicker">01 — Research</div>
+  <h2>What Counts as a Usable Performance?</h2>
+
+  <p>My research begins in the studio, at the point where optical capture of the hands stops being usable. Marker streams on small, frequently occluded joints drift, pop, freeze and swap between fingers. Automated cleanup can repair these streams to a numerical standard, yet animators still routinely discard the result: the numbers improve, but the gesture no longer reads as intentional human movement.</p>
+
+  <p>I treat these post-IK anomalies not merely as data defects but as <strong>breakdowns in expressive intent</strong> — moments when a character's gesture stops communicating and the audience loses access to the performance. The project maps where anomalies originate across the capture-to-engine pipeline and asks who decides that a repaired motion is good enough to ship.</p>
+
+  <p>The work joins making with documentation. I produce and analyse edited sequences, then formulate the criteria animators actually apply — <em>narrative legibility of gesture, character fit, and editability</em> — alongside measured data accuracy, testing them with practitioners through blind rating and reported inter-rater reliability. The aim is a <strong>practice-led framework</strong> that turns informal frame-by-frame judgment into a reproducible method.</p>
+
+  <h3>Questions guiding the work</h3>
+  <ul class="list">
+    <li>Where in the capture-to-engine pipeline do the anomalies that matter to an audience originate?</li>
+    <li>Do practitioner judgments of a repaired performance align with the error metrics used to repair it?</li>
+    <li>Can editability — a clip's tolerance to further animator adjustment — become a reliable criterion for evaluation?</li>
+  </ul>
+</section>
+
+<!-- ============ 3. PRACTICE ============ -->
+<section id="practice">
+  <div class="kicker">02 — Creative &amp; Technical Practice</div>
+  <h2>Selected Work</h2>
+  <p class="role">Four short pieces, each with the problem, my role, and what the work demonstrates. Together they show the making side of the research: capture pipelines, image-making, and editing as decision-making.</p>
+
+  <div class="card">
+    <div class="meta">2026 · Applied Research · Motion Capture</div>
+    <h3>Motion-Capture Pipeline Showcase</h3>
+    <p class="role">Role: pipeline design, capture operation, data repair, retargeting, in-engine integration</p>
+    <p>A demonstration of the motion-capture programme I established at the university: performer marker placement, capture, data repair, T-pose calibration, retargeting and integration in Unreal. The showcase is both a teaching resource and the practical ground of my research into where hand data fails.</p>
+    <video src="assets/videos/mocap-showcase.mp4" controls preload="metadata"></video>
+    <p class="caption">Original language: Mandarin (voice-over and on-screen titles). Moving image and pipeline work are my own.</p>
+  </div>
+
+  <div class="card">
+    <div class="meta">2025 · Competition Work · Motion Capture &amp; Real-Time Rendering</div>
+    <h3>The Bracelet (星镯)</h3>
+    <p class="role">Role: screenwriter and narrative designer; story-line editing; opening and closing title sequences; overall production supervision</p>
+    <p>A competition entry in which I authored the script and narrative structure, edited the story line, produced the opening and closing title sequences, and supervised the overall production. The piece is a practical test of the capture-to-engine chain I research: how a performance survives retargeting and in-engine integration, and where its expressive detail is lost or preserved on screen.</p>
+    <video src="assets/videos/xingzhuo-mocap.mp4" controls preload="metadata"></video>
+    <p class="caption">Competition work; motion capture and real-time rendering. Visuals presented with minimal English context as the work is largely nonverbal.</p>
+  </div>
+
+  <div class="card">
+    <div class="meta">2024 · Creative Practice · Generative Image-Making &amp; Editing</div>
+    <h3>The Journey Home (归途)</h3>
+    <p class="role">Role: image generation, editing, music, narrative structure</p>
+    <p>A short film built from generated images that I edited and scored into a continuous narrative. My contribution is the selection, sequencing, rhythm and sound — turning generated material into a piece that reads as a coherent visual story. Selected for a national digital-arts competition.</p>
+    <video src="assets/videos/aigc-guitu.mp4" controls preload="metadata"></video>
+    <p class="caption">Original language: Mandarin (on-screen titles and voice-over). Image generation, editing and scoring are my own work.</p>
+  </div>
+
+  <div class="card">
+    <div class="meta">2023 · Editing Practice · Short Form</div>
+    <h3>Emotional Short — Editing Study</h3>
+    <p class="role">Role: editor — shot selection, pacing, sound</p>
+    <p>A short editing study exploring how rhythm and sound shape emotional reading without dialogue. Made as a teaching demonstration in post-production; the decisions here — what to keep, what to cut, how long a gesture must hold to register — inform the editability question in my research.</p>
+    <video src="assets/videos/editing-emotion.mp4" controls preload="metadata"></video>
+    <p class="caption">Original language: Mandarin (on-screen titles). Editing and sound are my own work.</p>
+  </div>
+
+  <h3>Toolset</h3>
+  <p class="role">Motion capture: optical and inertial systems, Motive · Data repair and retargeting: MotionBuilder · In-engine animation: Unreal Engine · Editing and compositing: Premiere, After Effects · Generative image-making and sound assembly.</p>
+</section>
+
+<!-- ============ 4. TEACHING ============ -->
+<section id="teaching">
+  <div class="kicker">03 — Teaching</div>
+  <h2>Assistant Lecturer · Yinchuan University of Science and Technology</h2>
+
+  <p>I teach animation and visual effects in a studio-based curriculum, with an emphasis on students finishing work rather than only studying it. I initiated the university's motion-capture programme, defined its equipment and software specifications, and wrote the standardised pipeline documentation covering the full chain from marker placement and capture to repair, calibration, retargeting and in-engine integration.</p>
+
+  <h3>Core courses taught</h3>
+  <ul class="list">
+    <li><strong>Film and Television Animation</strong></li>
+    <li><strong>Visual Effects</strong></li>
+    <li><strong>Digital Film and Television Technology</strong></li>
+  </ul>
+
+  <p class="role">Teaching is not separate from the research: years of watching where cleaned-up hand data fails on screen form the empirical basis of the questions I ask.</p>
+</section>
+
+<!-- ============ 5. CV & CONTACT ============ -->
+<section id="cv">
+  <div class="kicker">04 — CV &amp; Contact</div>
+  <h2>Curriculum Vitae</h2>
+
+  <p>
+    <a class="btn" href="assets/Xiaowei_Yan_CV.pdf" download>Download CV (PDF)</a>
+    <a class="btn" href="mailto:xiaoweiyan.cn@gmail.com">xiaoweiyan.cn@gmail.com</a>
+  </p>
+
+  <h3>Quick facts</h3>
+  <ul class="list">
+    <li>M.F.A., Artistic Design — Renmin University of China</li>
+    <li>Assistant Lecturer, Animation and Digital Media Arts — Yinchuan University of Science and Technology</li>
+    <li>Former FX artist, light and energy effects</li>
+    <li>Research: motion-capture data quality, practice-led evaluation of usable performance</li>
+    <li>Based in Yinchuan, China · Mandarin (native) / English (professional working proficiency)</li>
+  </ul>
+
+  <p class="role">A full research statement and writing sample are available on request.</p>
+</section>
+
+<footer>
+  © 2026 Xiaowei Yan · Media Arts Practice &amp; Research · Last updated November 2026
+</footer>
+
+</body>
+</html>
